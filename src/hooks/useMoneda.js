@@ -7,8 +7,11 @@ const useMoneda = (label, stateInicial, modenedas) => {
     const Seleccionar = () => (
         <Fragment>
                 <label>{label}</label>
-                <select>
-                    <option value="MXN">-- Seleccione --</option>
+                <select
+                    onChange={e => updateState(e.target.value)}
+                    value={state}
+                >
+                    <option value="">-- Seleccione --</option>
                     {modenedas.map(item => (
                         <option key={item.codigo} value={item.codigo}>{item.nombre}</option>
                     ))}
