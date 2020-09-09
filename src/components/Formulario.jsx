@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import useMoneda from '../hooks/useMoneda'
 
 const Boton = styled.input`
     margin-top: 20px;
@@ -21,8 +22,13 @@ const Boton = styled.input`
 `
 
 const Formulario = () => {
+
+    const [state, SelectMonedas, updateState] = useMoneda()
+
     return (
         <form>
+
+            <SelectMonedas />
 
             <Boton
                 type='submit'
