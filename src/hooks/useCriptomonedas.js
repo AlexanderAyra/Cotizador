@@ -33,9 +33,9 @@ const useCriptomonedas = (label, stateInicial, listacripto) => {
                     value={state}
                 >
                     <option value="">-- Seleccione --</option>
-                    {/* {modenedas.map(item => (
-                        <option key={item.codigo} value={item.codigo}>{item.nombre}</option>
-                    ))} */}
+                    {listacripto.map(item => (
+                        <option key={item.CoinInfo.Id} value={item.CoinInfo.Name}>{item.CoinInfo.FullName}</option>
+                    ))}
                 </Select>
             </Fragment>
         )
