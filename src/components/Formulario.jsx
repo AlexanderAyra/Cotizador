@@ -24,7 +24,7 @@ const Boton = styled.input`
 
 `
 
-const Formulario = () => {
+const Formulario = ({setMoneda, setCriptomoneda}) => {
 
     const [listacripto, setCriptomonedas] = useState([])
     const [error, setError] = useState(false)
@@ -61,7 +61,8 @@ const Formulario = () => {
 
         setError(false)
 
-
+        setMoneda(moneda)
+        setCriptomoneda(criptomoneda)
 
     }
 
