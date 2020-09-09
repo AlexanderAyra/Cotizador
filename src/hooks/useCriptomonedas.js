@@ -21,7 +21,7 @@ const Select = styled.select`
     font-size: 1.2rem;
 `
 
-const useCriptomonedas = (label, stateInicial, modenedas) => {
+const useCriptomonedas = (label, stateInicial, listacripto) => {
     
     const [state, updateState] = useState(stateInicial)
 

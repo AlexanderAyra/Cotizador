@@ -46,6 +46,7 @@ function App() {
           alt='Imagen cripto'
         />
       </div>
+      
       <div>
         <Heading>
           Cotiza Cryptomonedas al instante
