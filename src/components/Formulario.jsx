@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import styled from 'styled-components'
 import useMoneda from '../hooks/useMoneda'
+import Error from './Error'
 import useCriptomonedas from '../hooks/useCriptomonedas'
 import Axios from 'axios'
 
@@ -69,7 +70,7 @@ const Formulario = () => {
             onSubmit={handleSubmit}
         >
 
-            {error ? <p>Hubo  un Error</p> : null}
+            {error ? <Error mensaje='Todos los campos son obligatorios' /> : null}
 
             <SelectMonedas />
 
