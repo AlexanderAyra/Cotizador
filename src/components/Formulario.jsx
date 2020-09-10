@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import useMoneda from '../hooks/useMoneda'
 import Error from './Error'
 import useCriptomonedas from '../hooks/useCriptomonedas'
-import Axios from 'axios'
+import axios from 'axios'
 
 const Boton = styled.input`
     margin-top: 20px;
@@ -44,7 +44,7 @@ const Formulario = ({setMoneda, setCriptomoneda}) => {
         const consultarAPI = async() => {
             const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD'
 
-            const resultado = await Axios.get(url)
+            const resultado = await axios.get(url)
 
             setCriptomonedas(resultado.data.Data);
         }
